@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <title>Mirex Network – Next-Gen Blockchain Ecosystem</title>
+
+    <meta name="description"
+        content="Mirex Network is a blockchain ecosystem focused on RWA tokenization, digital assets, smart contracts, ecosystem utility, and community-driven blockchain applications.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7ff;
+            color: #1b2559;
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        header {
+            background: #14245f;
+            color: #ffffff;
+            padding: 18px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 15px rgba(20, 36, 95, 0.15);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand img {
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .brand-name {
+            font-size: 23px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #8eb0ff;
+        }
+
+        .hero-image {
+            width: 100%;
+            background: #ffffff;
+            padding: 0;
+            margin: 0;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            max-height: 650px;
+            object-fit: cover;
+            display: block;
+        }
+
+        main {
+            padding: 50px 0;
+        }
+
+        .intro-card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 40px;
+            margin-bottom: 35px;
+            box-shadow: 0 8px 30px rgba(20, 36, 95, 0.08);
+            border: 1px solid #e1e7fa;
+        }
+
+        .logo-box {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .logo-box img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            border-radius: 20px;
+        }
+
+        h1 {
+            color: #14245f;
+            font-size: 38px;
+            line-height: 1.25;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #14245f;
+            font-size: 28px;
+            line-height: 1.3;
+            margin-bottom: 18px;
+            margin-top: 10px;
+        }
+
+        h3 {
+            color: #315bd8;
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #4d587c;
+            margin-bottom: 18px;
+        }
+
+        .lead {
+            font-size: 18px;
+            text-align: center;
+            max-width: 950px;
+            margin: 0 auto;
+            color: #4d587c;
+        }
+
+        .section {
+            background: #ffffff;
+            padding: 35px;
+            margin-bottom: 30px;
+            border-radius: 16px;
+            border-left: 5px solid #315bd8;
+            box-shadow: 0 6px 25px rgba(20, 36, 95, 0.07);
+        }
+
+        .section ul {
+            padding-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .section li {
+            color: #4d587c;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .feature-card {
+            background: #f4f7ff;
+            border: 1px solid #dce4fb;
+            border-radius: 14px;
+            padding: 25px;
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(49, 91, 216, 0.12);
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+        }
+
+        .feature-card p {
+            margin-bottom: 0;
+        }
+
+        .token-box {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+        .token-item {
+            background: #f4f7ff;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #dce4fb;
+        }
+
+        .token-item strong {
+            display: block;
+            color: #14245f;
+            margin-bottom: 5px;
+        }
+
+        .token-item span {
+            color: #4d587c;
+        }
+
+        .faq {
+            margin-top: 20px;
+        }
+
+        .faq-item {
+            background: #f4f7ff;
+            border: 1px solid #dce4fb;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .faq-item h3 {
+            color: #14245f;
+            margin-bottom: 8px;
+        }
+
+        .faq-item p {
+            margin-bottom: 0;
+        }
+
+        footer {
+            background: #14245f;
+            color: #ffffff;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        footer p {
+            color: #dce5ff;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        @media (max-width: 900px) {
+            .feature-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 25px;
+            }
+        }
+
+        @media (max-width: 650px) {
+            header {
+                position: relative;
+            }
+
+            .header-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero-image img {
+                max-height: none;
+            }
+
+            main {
+                padding: 30px 0;
+            }
+
+            .intro-card,
+            .section {
+                padding: 25px 20px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .token-box {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 23px;
+            }
+
+            p,
+            .section li {
+                font-size: 15px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container header-inner">
+
+            <div class="brand">
+
+                <!-- CHANGE LOGO FILE HERE -->
+                <img src="Mirex Network.png" alt="Mirex Network Logo">
+
+                <div class="brand-name">
+                    Mirex Network
+                </div>
+
+            </div>
+
+            <nav>
+                <a href="#overview">Overview</a>
+                <a href="#features">Features</a>
+                <a href="#token">MRX Token</a>
+                <a href="#ecosystem">Ecosystem</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <section class="hero-image">
+
+        <!-- CHANGE MAIN IMAGE FILE HERE -->
+        <img src="Mirex Network Img.png" alt="Mirex Network">
+
+    </section>
+
+    <main>
+
+        <div class="container">
+
+            <section class="intro-card" id="overview">
+
+                <div class="logo-box">
+
+                    <!-- CHANGE LOGO FILE HERE -->
+                    <img src="Mirex Network.png" alt="Mirex Network Logo">
+
+                </div>
+
+                <h1>
+                    Mirex Network: Next-Generation Blockchain for RWA Tokenization and Ecosystem Utility
+                </h1>
+
+                <p class="lead">
+                    Mirex Network is a blockchain ecosystem designed around digital assets,
+                    real-world asset tokenization, smart contracts, ecosystem utility,
+                    and community-focused blockchain applications.
+                </p>
+
+            </section>
+
+            <section class="section">
+
+                <h2>
+                    What Is Mirex Network?
+                </h2>
+
+                <p>
+                    Mirex Network is a blockchain ecosystem focused on creating
+                    infrastructure for digital assets, tokenized real-world assets,
+                    smart contracts, and decentralized applications.
+                </p>
+
+                <p>
+                    The ecosystem is designed to connect blockchain technology with
+                    practical digital and real-world use cases while providing utility
+                    through its native blockchain infrastructure and token ecosystem.
+                </p>
+
+                <p>
+                    The network also focuses on community participation, ecosystem
+                    activities, digital assets, and applications built around blockchain
+                    technology.
+                </p>
+
+            </section>
+
+            <section class="section" id="features">
+
+                <h2>
+                    Main Features of Mirex Network
+                </h2>
+
+                <p>
+                    Mirex Network brings together several blockchain-focused features
+                    within a single ecosystem.
+                </p>
+
+                <div class="feature-grid">
+
+                    <div class="feature-card">
+                        <h3>RWA Tokenization</h3>
+                        <p>
+                            The ecosystem focuses on representing real-world assets
+                            through blockchain-based digital structures and tokenized
+                            applications.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Smart Contracts</h3>
+                        <p>
+                            Smart-contract functionality provides the foundation for
+                            automated blockchain applications and ecosystem utilities.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Digital Assets</h3>
+                        <p>
+                            Mirex supports an ecosystem built around blockchain-based
+                            digital assets and token-related applications.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Community Participation</h3>
+                        <p>
+                            Community-focused activities are an important part of the
+                            broader Mirex ecosystem.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Tokenized Events</h3>
+                        <p>
+                            Blockchain technology can be used within the ecosystem to
+                            create tokenized event and participation models.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Ecosystem Applications</h3>
+                        <p>
+                            The network is structured to support different applications
+                            and utilities built around its blockchain infrastructure.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="section" id="token">
+
+                <h2>
+                    Mirex ($MRX) Token
+                </h2>
+
+                <p>
+                    MRX is the native utility token associated with the Mirex ecosystem.
+                    It is designed to provide utility within the blockchain environment
+                    and support selected ecosystem functions.
+                </p>
+
+                <p>
+                    The token can be used in connection with blockchain operations,
+                    ecosystem activities, and applications that support MRX utility.
+                </p>
+
+                <div class="token-box">
+
+                    <div class="token-item">
+                        <strong>Token Name</strong>
+                        <span>Mirex</span>
+                    </div>
+
+                    <div class="token-item">
+                        <strong>Token Symbol</strong>
+                        <span>MRX</span>
+                    </div>
+
+                    <div class="token-item">
+                        <strong>Blockchain</strong>
+                        <span>MRX-20</span>
+                    </div>
+
+                    <div class="token-item">
+                        <strong>Token Type</strong>
+                        <span>Utility Token</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="section">
+
+                <h2>
+                    MRX-20 Blockchain
+                </h2>
+
+                <p>
+                    The Mirex ecosystem uses the MRX-20 blockchain framework as part
+                    of its infrastructure for digital assets and blockchain-based
+                    applications.
+                </p>
+
+                <p>
+                    The network is designed to support smart contracts, token
+                    functionality, digital assets, and ecosystem applications through
+                    blockchain-based infrastructure.
+                </p>
+
+                <p>
+                    Blockchain-based records can provide transparent and verifiable
+                    information about supported network activities.
+                </p>
+
+            </section>
+
+            <section class="section">
+
+                <h2>
+                    Dual-Token Ecosystem
+                </h2>
+
+                <p>
+                    The Mirex ecosystem includes a broader token structure involving
+                    Mirex and Lumira.
+                </p>
+
+                <p>
+                    Mirex is positioned as the primary utility-oriented token within
+                    the ecosystem, while Lumira is associated with additional ecosystem
+                    functionality and participation models.
+                </p>
+
+                <p>
+                    The dual-token structure allows different functions to be separated
+                    across the ecosystem while maintaining a common blockchain-based
+                    infrastructure.
+                </p>
+
+            </section>
+
+            <section class="section" id="ecosystem">
+
+                <h2>
+                    Mirex Network Ecosystem
+                </h2>
+
+                <p>
+                    Mirex Network is structured as an ecosystem rather than a single
+                    blockchain application. Its broader focus includes digital assets,
+                    real-world asset tokenization, smart contracts, community activities,
+                    and blockchain-powered applications.
+                </p>
+
+                <div class="feature-grid">
+
+                    <div class="feature-card">
+                        <h3>Real-World Assets</h3>
+                        <p>
+                            Tokenization infrastructure can connect physical or
+                            traditional assets with blockchain-based digital
+                            representations.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Community Activities</h3>
+                        <p>
+                            Community participation can be integrated into ecosystem
+                            events and blockchain-based activities.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Gaming Applications</h3>
+                        <p>
+                            Blockchain-based gaming and digital asset applications
+                            can form part of the wider ecosystem.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Cloud Mining</h3>
+                        <p>
+                            Cloud-mining related applications and ecosystem utilities
+                            can be incorporated into blockchain-focused services.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Smart Contracts</h3>
+                        <p>
+                            Smart contracts provide programmable functionality for
+                            supported blockchain applications.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Digital Economy</h3>
+                        <p>
+                            The ecosystem aims to connect blockchain infrastructure
+                            with digital economic activities and token-based utility.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="section">
+
+                <h2>
+                    How RWA Tokenization Works
+                </h2>
+
+                <p>
+                    Real-world asset tokenization refers to representing ownership,
+                    participation, or economic rights connected to physical or
+                    traditional assets through blockchain-based digital tokens.
+                </p>
+
+                <p>
+                    Within a blockchain ecosystem, tokenization can create digital
+                    records that are easier to manage, transfer, and integrate with
+                    smart-contract applications.
+                </p>
+
+                <p>
+                    Mirex Network places RWA tokenization among its broader blockchain
+                    and ecosystem use cases.
+                </p>
+
+            </section>
+
+            <section class="section">
+
+                <h2>
+                    Tokenized Events and Community Participation
+                </h2>
+
+                <p>
+                    Blockchain technology can be used to create digital participation
+                    models for events and community activities.
+                </p>
+
+                <p>
+                    Tokenized events can connect participation records with blockchain
+                    assets and programmable smart-contract functionality.
+                </p>
+
+                <p>
+                    This approach can provide a digital layer for community-focused
+                    activities within the wider Mirex ecosystem.
+                </p>
+
+            </section>
+
+            <section class="section">
+
+                <h2>
+                    Smart Contracts and Blockchain Utility
+                </h2>
+
+                <p>
+                    Smart contracts are programmable blockchain applications that can
+                    automatically execute predefined rules when their required
+                    conditions are met.
+                </p>
+
+                <p>
+                    Within the Mirex ecosystem, smart-contract functionality provides
+                    a foundation for token operations, digital assets, applications,
+                    and other blockchain utilities.
+                </p>
+
+            </section>
+
+            <section class="section">
+
+                <h2>
+                    Blockchain Transparency
+                </h2>
+
+                <p>
+                    Blockchain infrastructure records network activity in a distributed
+                    digital environment. This structure can make supported transactions
+                    and blockchain operations easier to verify.
+                </p>
+
+                <p>
+                    Transparent blockchain records are an important component of
+                    digital-asset ecosystems and tokenized applications.
+                </p>
+
+            </section>
+
+            <section class="section">
+
+                <h2>
+                    Ecosystem Utility
+                </h2>
+
+                <p>
+                    Mirex Network is designed around multiple blockchain use cases
+                    rather than a single application.
+                </p>
+
+                <ul>
+                    <li>Digital asset infrastructure</li>
+                    <li>Real-world asset tokenization</li>
+                    <li>Smart-contract applications</li>
+                    <li>Token-based ecosystem utility</li>
+                    <li>Community participation</li>
+                    <li>Tokenized events and digital applications</li>
+                </ul>
+
+            </section>
+
+            <section class="section">
+
+                <h2>
+                    Mirex Network Development
+                </h2>
+
+                <p>
+                    The development of the Mirex ecosystem is centered around
+                    blockchain infrastructure, token utility, digital assets,
+                    real-world asset tokenization, and additional ecosystem
+                    applications.
+                </p>
+
+                <p>
+                    Future development can expand the range of applications and
+                    utilities supported across the network as the ecosystem evolves.
+                </p>
+
+            </section>
+
+            <section class="section" id="faq">
+
+                <h2>
+                    Frequently Asked Questions
+                </h2>
+
+                <div class="faq">
+
+                    <div class="faq-item">
+                        <h3>What is Mirex Network?</h3>
+                        <p>
+                            Mirex Network is a blockchain ecosystem focused on
+                            digital assets, RWA tokenization, smart contracts,
+                            token utility, and blockchain-based applications.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>What is the Mirex token?</h3>
+                        <p>
+                            Mirex, represented by the MRX symbol, is the native
+                            utility token associated with the Mirex ecosystem.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>What is MRX-20?</h3>
+                        <p>
+                            MRX-20 is the blockchain framework associated with
+                            the Mirex ecosystem and its digital-asset infrastructure.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>What is RWA tokenization?</h3>
+                        <p>
+                            RWA tokenization is the process of representing
+                            real-world assets or related rights through
+                            blockchain-based digital tokens.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>What can smart contracts do?</h3>
+                        <p>
+                            Smart contracts can execute predefined rules and
+                            support programmable blockchain applications.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>What is the Mirex ecosystem focused on?</h3>
+                        <p>
+                            The ecosystem focuses on blockchain infrastructure,
+                            digital assets, RWA tokenization, smart contracts,
+                            token utility, and community-oriented applications.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="section">
+
+                <h2>
+                    Conclusion
+                </h2>
+
+                <p>
+                    Mirex Network combines blockchain infrastructure, digital assets,
+                    smart contracts, RWA tokenization, and ecosystem utility into a
+                    broader blockchain-focused environment.
+                </p>
+
+                <p>
+                    Through its MRX token, MRX-20 infrastructure, tokenized applications,
+                    and ecosystem-focused approach, Mirex provides a framework for
+                    blockchain-based digital and real-world use cases.
+                </p>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+                © 2026 Mirex Network. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
